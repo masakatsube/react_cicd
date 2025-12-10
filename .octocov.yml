@@ -10,4 +10,6 @@ diff:
   datastores:
     - artifact://${GITHUB_REPOSITORY}
 coverage:
+  paths:
+    - coverage/cobertura-coverage.xml
   acceptable: 30%
