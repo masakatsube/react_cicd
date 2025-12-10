@@ -11,5 +11,5 @@ diff:
     - artifact://${GITHUB_REPOSITORY}
 coverage:
   paths:
-    - coverage/cobertura.xml
+    - coverage/cobertura-coverage.xml
   acceptable: 30%
