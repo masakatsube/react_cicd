@@ -1,0 +1,15 @@
+comment:
+  if: is_pull_request
+  deletePrevious: true
+  hideFooterLink: true
+report:
+  if: is_default_branch
+  datastores:
+    - artifact://${GITHUB_REPOSITORY}
+diff:
+  datastores:
+    - artifact://${GITHUB_REPOSITORY}
+coverage:
+  paths:
+    - coverage/cobertura.xml
+  acceptable: 30%
