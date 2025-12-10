@@ -1,0 +1,29 @@
+{
+  "name": "react-vitest-project",
+  "version": "1.0.0",
+  "description": "React project with Vitest for testing and octocov integration.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    // 💡 CIで実行するテストコマンド 💡
+    "test:coverage": "vitest run --coverage" 
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^3.1.0",
+    "jsdom": "^21.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.2.0",
+    // ⬇️ Vitestとカバレッジに必要な依存関係 ⬇️
+    "vitest": "^0.30.1"
+  }
+}
