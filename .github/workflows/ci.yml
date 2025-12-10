@@ -1,0 +1,35 @@
+name: CI - React Test & Build
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  test_and_coverage:
+    name: Test & Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install 
+
+      - name: Run Tests & Generate Cobertura Report
+        run: npm run test:coverage 
+
+      - name: Run octocov (差分カバレッジとCentral連携)
+        uses: k1LoW/octocov@v1
