@@ -6,7 +6,7 @@ export default defineConfig({
     environment: 'jsdom', // Reactプロジェクトの場合
     
     coverage: {
-      provider: 'v8', // デフォルトはc8。必要に応じて設定
+      provider: 'c8', // デフォルトはc8。必要に応じて設定
       reporter: ['text', 'json', 'cobertura'], // CLIにも表示しつつ、octocov用にcoberturaを出力
     },
   },
