@@ -33,7 +33,7 @@ jobs:
 
       - name: Verify Cobertura file exists
         run: |
-          ls -l coverage/cobertura.xml
+          ls -l coverage
           cat coverage/cobertura.xml | head -n 5
 
       - name: Run octocov (差分カバレッジとCentral連携)
