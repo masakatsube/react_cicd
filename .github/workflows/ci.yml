@@ -31,5 +31,10 @@ jobs:
       - name: Run Tests & Generate Cobertura Report
         run: npm run test:coverage 
 
+      - name: Verify Cobertura file exists
+        run: |
+          ls -l coverage/cobertura.xml
+          cat coverage/cobertura.xml | head -n 5
+
       - name: Run octocov (差分カバレッジとCentral連携)
         uses: k1LoW/octocov-action@v1
